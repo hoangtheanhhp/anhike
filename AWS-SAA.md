@@ -8,8 +8,11 @@
   - ELB provides load balancing within one Region, AWS Global Accelerator provides traffic management across multiple Regions [...] AWS Global Accelerator complements ELB by extending these capabilities beyond a single AWS Region, allowing you to provision a global interface for your applications in any number of Regions. If you have workloads that cater to a global client base, we recommend that you use AWS Global Accelerator. If you have workloads hosted in a single AWS Region and used by clients in and around the same Region, you can use an Application Load Balancer or Network Load Balancer to manage your resources. https://aws.amazon.com/global-accelerator/faqs/
 
 
-# Auto Scaling
+# EC2
+## Auto Scaling
 - https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html
+- [lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html)
+- 
 
 # VPN
 - [Monitoring VPN tunnels using Amazon CloudWatch](https://docs.aws.amazon.com/vpn/latest/s2svpn/monitoring-cloudwatch-vpn.html)
@@ -18,7 +21,8 @@
 - [Storage Types](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html)
 
 - [FAQS](https://aws.amazon.com/ebs/faqs/)
-
+- [Read Replicas](https://aws.amazon.com/rds/features/read-replicas/)
+- ACID => RDS & DynamoDB but SQL=> RDS only (DynamoDB is No SQL DB)
 # CloudTrail
 - [AWS CloudTrail Update – Turn on in All Regions & Use Multiple Trails](https://aws.amazon.com/blogs/aws/aws-cloudtrail-update-turn-on-in-all-regions-use-multiple-trails/)
 
@@ -49,3 +53,8 @@
 
 # VPC
 - [Gateway Endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-s3.html)
+
+# SQS
+- The visibility timeout begins when Amazon SQS returns a message. During this time, the consumer processes and deletes the message. However, if the consumer fails before deleting the message and your system doesn't call the DeleteMessage action for that message before the visibility timeout expires, the message becomes visible to other consumers and the message is received again. If a message must be received only once, your consumer should delete it within the duration of the visibility timeout.
+
+- [sqs-visibility-timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html)
