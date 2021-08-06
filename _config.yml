@@ -1,4 +1,12 @@
 theme: jekyll-theme-architect
-markdown: GFM
+markdown: kramdown
 plugins:
   - jekyll-sitemap
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+timezone: Asia/Tokyo
