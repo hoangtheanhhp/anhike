@@ -16,7 +16,7 @@ Hơn nữa, chúng ta phải làm những việc giống vậy đối với bả
 Chúng ta không phải là tự giày vò bản thân và tự khiển trách mình bởi những khuyết điểm mà chúng ta phải điềm tĩnh nhìn vào điểm mạnh của mình, và tập trung mạnh mẽ vào điểm mạnh đó.
 
 >人はみな、「自分は何かを成し遂げることができる」と感じる必要があります。進んで努力をし、適切な計画を立て、試練を乗り越える準備をするなら、夢に向かって邁進することができます。つまり、多くの逆境に直面すればするほど、ますますポジティブにならなければならないのです。
->>Điều quan trọng là mọi người ai cũng phải tự nói với chính mình rằng bản thân mình sẽ hoàn thành được điều đó.　Nếu như nỗ lực hướng về trước, lên một kế hoạch phù hợp và chuẩn bị vượt qua mọi thử thách thì giấc mơ chắc chắn sẽ trở thành hiện thực.Tóm lại là, CÀNG ĐỐI MẶT VỚI NGHỊCH CẢNH BAO NHIỀU THÌ CHÚNG TA CÀNG PHẢI MANG MỘI TINH THẦN TÍCH CỰC.
+>>Điều quan trọng là mọi người ai cũng phải tự nói với chính mình rằng bản thân mình sẽ hoàn thành được điều đó.　Nếu như nỗ lực hướng về trước, lên một kế hoạch phù hợp và chuẩn bị vượt qua mọi thử thách thì giấc mơ chắc chắn sẽ trở thành hiện thực.Tóm lại là, CÀNG ĐỐI MẶT VỚI NGHỊCH CẢNH BAO NHIỀU THÌ CHÚNG TA CÀNG PHẢI MANG MỘT TINH THẦN TÍCH CỰC.
 
 >第1章で説明したように、負けているチームを指導しているときに厳しく接すると、人々の反発を招く結果になります。それに対し、勝っているときは人々の自信が高まっていますから、多少厳しく接してもいいのです。チームが負けているときは一人ひとりの精神状を気遣い、自信を持つようにはげまさなければなりません。
 >>Giống như ở chương 1 tôi đã giải thích, Nếu như chỉ đạo một đôij bóng sắp thua bằng thái độ khắt khe kết quả là dẫn đến thái đội phản ứng gắt liệt của mọi người,　Trái với điều đó, nếu như dùng thái độ khắc nghiệt đó đối với những người có lòng tự tôn cao khi mà thắng cuộc thì cũng không sao. Khi mà đội đang thua cuộc thì chúng ta cần phải tạo cho mỗi người trong đội một niềm tin, sự tự tin và một tinh thần thoải mái.

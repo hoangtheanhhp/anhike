@@ -28,10 +28,18 @@
 
   - Mang nghĩa phục hồi về
 - 浪費 LÃNG PHÍ 浪費癖 : thói quen xài tiền phung phí = 無駄遣い
-- 添削 添削＝訂正 
+- 添削 添削＝訂正
   - 点検：（設備をチェックする）
 
   - 添削：　（文章をチェックする）
+## D005
+- 中継 Truyền thanh; truyền hình
+- 構想 concept ビジョン Kế hoạch; mưu đồ
+- 手配
+  - chuẩn bị sắp xếp bố trí
+  - điều tra truy nã
+- 開放 Sự mở cửa; sự tự do hoá
+- 誘惑　ゆうわく　Sự quyến rũ; sự lôi cuốn; sự cám dỗ
 ## D10
 - さぞ：surely
 - とりわけ：特に

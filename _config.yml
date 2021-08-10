@@ -1,5 +1,5 @@
 theme: jekyll-theme-architect
-markdown: kramdown
+markdown: GFM
 plugins:
   - jekyll-sitemap
 kramdown:
