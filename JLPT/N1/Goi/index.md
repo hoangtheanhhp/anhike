@@ -1,5 +1,20 @@
 # [Lophoctiengnhat](https://www.lophoctiengnhat.com/de-luyen-thi-trac-nghiem-cap-do-N1.html)
 
+## 2.D002
+- 手回し  Những sự chuẩn bị; những sự sắp đặt
+- 覆すlật ngược 言った言葉を覆す:rút lại lời nói
+- 趣旨 しゅし「THÚ CHỈ」1. mục đích 2. Ý đồ muốn truyền tải purpose
+- 長々 dài dòng, tràng giang đại hải
+- コントラスト contrast tương phản
+- 手薄 てうす「THỦ BẠC」手薄imageてうす「THỦ BẠC」
+
+## 2.D003
+- 馴染む なじむ「TUẦN NHIỄM」馴染む＝慣れる: quen
+- 張り合う ＝競争（きょうそう）
+- 朗報 ろうほう「LÃNG BÁO」tin tốt 嬉しい知らせ
+- 悪しからず あしからず
+- 疎ら thưa thớt; rải rác; lơ thơ
+
 
 ## D003
 - 類推 るいすい 「LOẠI THÔI」  Suy đoán, suy luận, loại suy
@@ -32,6 +47,15 @@
   - 点検：（設備をチェックする）
 
   - 添削：　（文章をチェックする）
+
+## D006
+  - 遥か　はるか　Xa xưa; xa; xa xôi 遥か昔に vào thời xa xưa
+  - 儚い　はかない　Ngắn ngủi 儚い命　楽しいがはかないこと　niềm vui thoáng qua
+  - 素朴　そぼく「TỐ PHÁC」 Mộc mạc
+  - 忠告　ちゅうこく「TRUNG CÁO」
+    - 忠告: khuyên theo kiểu cảnh báo( てはいけない...)　
+    - 助言: khuyên theo kiểu nên làm gì đó, gợi ý(方が良い...)
+
 ## D005
 - 中継 Truyền thanh; truyền hình
 - 構想 concept ビジョン Kế hoạch; mưu đồ
