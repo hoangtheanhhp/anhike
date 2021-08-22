@@ -1,0 +1,9 @@
+- three arrows capital
+- grayscale
+- Pantera Capital
+- Coinbase
+- A16Z
+- Blockchain Capital
+- Multicoin Capital
+- Binance Labs 
+- Alameda FTX
