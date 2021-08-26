@@ -32,7 +32,7 @@ Hai anh trai toii chỉ biết chơi bóng một chút và hình như không có
 >私は何かが得意になりたいと思っていました。父は真面目な人間で、毎朝五時半に起きて仕事に出かけていました。母は一家五人をまとめる役割を担っていました。そんな両親から勤勉さと結束力の大切さを学んだように思います。
 バスケットボールはいとこのウォルターから手ほどきを受けました。二人で初めて練習をした日、正しい技術の習得と練習の積み重ねが重要だと感じたのを覚えています。正しい技術を学んで、一生懸命に練習を積めば必ず目標が達成できるという単純な教訓でしたが、どんなことでも、良い習慣の確立が仕事のプロになる方法だと後で気づきました。
 >>Tôi đã từng nghĩ rằng mình sẽ trở nên giỏi ở một sở trường nào đó. Bố tôi là một người mẫu mực hằng sáng đều dậy lúc 5h30 và bắt đầu công việc.
-Bố tôi một mình gánh vác công việc cho cả 5 thành viên trong gia đình.
+Mẹ tôi một mình gánh vác công việc cho cả 5 thành viên trong gia đình.
 Tôi đã nghĩ rằng mình phải cố gắng học những điều quan trọng từ bố mẹ tôi về sự đồng lòng, và sự chăm chỉ.l
 Tôi đã tiếp thu được người anh WARUTA .
 Điều quan trọng khi cả hai người cùng luyện tập trong những ngày đầu là phải luyện tập thường xuyên và tiếp thu những kĩ năng đúng đắn.
