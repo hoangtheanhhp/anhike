@@ -125,3 +125,7 @@ Xuất phát điểm là~; khởi điểm là ~, mở đầu~
 
 ## ～わけがない
 Sao có thể...
+## 〜ではあるまいか
+>Phải chăng là...
+
+## 
