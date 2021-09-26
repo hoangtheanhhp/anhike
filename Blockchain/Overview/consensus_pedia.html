@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>C&#x1A1; ch&#x1EBF; &dstrok;&#x1ED3;ng thu&#x1EAD;n trong Blockchain</title>
+        <style>
+/* From extension vscode.markdown-math */
+@font-face{font-family:KaTeX_AMS;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Script;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size1;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size2;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size3;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size4;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Typewriter;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype");font-weight:400;font-style:normal}.katex{font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0;text-rendering:auto;border-color:currentColor}.katex *{-ms-high-contrast-adjust:none!important}.katex .katex-version:after{content:"0.13.0"}.katex .katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-weight:700;font-style:italic}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{display:inline-table;table-layout:fixed;border-collapse:collapse}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;vertical-align:bottom;position:relative}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;vertical-align:bottom;font-size:1px;width:2px;min-width:2px}.katex .vbox{display:inline-flex;flex-direction:column;align-items:baseline}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{width:0;max-width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{width:0;position:relative}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{display:inline-block;border:0 solid;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline{display:inline-block;width:100%;border-bottom-style:dashed}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{display:block;position:absolute;width:100%;height:inherit;fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1}.katex svg path{stroke:none}.katex img{border-style:none;min-width:0;min-height:0;max-width:none;max-height:none}.katex .stretchy{width:100%;display:block;position:relative;overflow:hidden}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{width:100%;position:relative;overflow:hidden}.katex .halfarrow-left{position:absolute;left:0;width:50.2%;overflow:hidden}.katex .halfarrow-right{position:absolute;right:0;width:50.2%;overflow:hidden}.katex .brace-left{position:absolute;left:0;width:25.1%;overflow:hidden}.katex .brace-center{position:absolute;left:25%;width:50%;overflow:hidden}.katex .brace-right{position:absolute;right:0;width:25.1%;overflow:hidden}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{box-sizing:border-box;border:.04em solid}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{box-sizing:border-content;border-top:.049em solid;border-right:.049em solid;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{counter-increment:katexEqnNo;content:"(" counter(katexEqnNo) ")"}.katex .mml-eqn-num:before{counter-increment:mmlEqnNo;content:"(" counter(mmlEqnNo) ")"}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;position:absolute;left:calc(50% + .3em);text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{text-align:left;padding-left:2em}body{counter-reset:katexEqnNo mmlEqnNo}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                padding: 20px 40px;
+            }
+
+            img {
+                margin: auto;
+                width: 40%;
+                display: block;
+            }
+
+            ol {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            body {
+                font-size: 16px;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="cơ-chế-đồng-thuận-trong-blockchain">Cơ chế đồng thuận trong Blockchain</h1>
+<p>Cơ chế đồng thuận là một cơ chế giúp các nhà giao dịch đưa ra các thỏa thuận mà không gặp vấn đề gì về lợi ích, mong muốn ảnh hưởng của các nhóm thiểu số. Đồng thời, đảm bảo rằng 1 nhóm nào đó không thể dùng quyền của mình để áp đặt hay điều khiển cả một tổ hợp người dùng trên cùng mạng lưới.</p>
+<p><img src="https://lina.network/wp-content/uploads/2020/07/consensus-mechanisms.jpg" alt="Cơ chế đồng thuận của Blockchain"></p>
+<p><em>Cơ chế đồng thuận của Blockchain</em></p>
+<p>Cơ chế đồng thuận chịu trách nhiệm duy trì tính toàn vẹn và bảo mật của hệ thống phân tán. Khi một giao dịch được diễn ra, hệ thống trên Blockchain sẽ gửi thông tin đến các nút cá nhân. Giao dịch chỉ được diễn ra khi nhận được nhiều sự đồng thuận hơn từ các nút cùng trong mạng lưới đó.</p>
+<p>Hiện nay, nền tảng blockchain có hai cơ chế đồng thuận chính: đồng thuận bằng Bằng chứng công việc (Proof of Work) và Bằng chứng cổ phần (Proof of Stake). Ngoài ra còn rất nhiều các thuật toán đồng thuận khác sẽ được giới thiệu ở dưới đây</p>
+<ol>
+<li>Proof of Work</li>
+</ol>
+<p><img src="https://miro.medium.com/max/1204/1*AqgfTthyFsFAxHhXxa7NEg.png" alt="image"></p>
+<ul>
+<li>Ưu điểm:
+Nó đã được thử nghiệm từ năm 2009 và vẫn đứng vững cho đến ngày nay.</li>
+<li>Nhược điểm:
+<ul>
+<li>Tốc độ xử lý chậm.</li>
+<li>Sử dụng nhiều năng lượng, không tốt cho môi trường.</li>
+<li>Dễ bị ảnh hưởng bởi quy mô nền kinh tế.</li>
+<li>Được sử dụng bởi: Bitcoin, Ethereum, Litecoin, Dogecoin, v.v.</li>
+</ul>
+</li>
+<li>Loại hình: Đồng thuận cạnh tranh.</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Đây là thuật toán đồng thuận đầu tiên (được đề xuất bởi Satoshi Nakamoto cha đẻ của Bitcoin) để tạo ra sự đồng thuận phân tán và giải quyết vấn đề chi tiêu gấp đôi. POW không phải là một ý tưởng mới, nhưng cách Satoshi kết hợp điều này và các khái niệm hiện có khác - chữ ký số, chuỗi merkle và mạng P2P - thành một hệ thống đồng thuận phân tán khả thi, trong đó tiền điện tử là ứng dụng cơ bản và đầu tiên, khá sáng tạo.
+Cách thức hoạt động mà những người tham gia blockchain (được gọi là thợ đào) phải giải quyết một vấn đề tính toán phức tạp nhưng vô dụng để thêm một khối giao dịch vào blockchain.</p>
+</blockquote>
+<ol start="2">
+<li>Proof of Stake</li>
+</ol>
+<ul>
+<li>
+<p>Ưu điểm:</p>
+<ul>
+<li>Tiết kiệm năng lượng.</li>
+<li>Muốn tấn công mạng phải bỏ ra chi phí lớn để thu gom coin/token.</li>
+<li>Không dễ bị ảnh hưởng bởi quy mô kinh tế</li>
+</ul>
+</li>
+<li>
+<p>Nhược điểm:</p>
+<ul>
+<li>Vấn đề <a href="https://kipalog.com/posts/Tim-hieu-Proof-of-Stake--Nothing-at-Stake">nothing at stake</a> (cổ phần bằng 0)</li>
+</ul>
+</li>
+<li>
+<p>Được sử dụng bởi: Ethereum (v2), Peercoin, Nxt.</p>
+</li>
+<li>
+<p>Loại hình: Đồng thuận cạnh tranh.</p>
+</li>
+<li>
+<p>Giải thích:</p>
+</li>
+</ul>
+<blockquote>
+<p>Bằng chứng cổ phần được tạo ra để thay thế cho bằng chứng công việc (PoW), để giải quyết các nhược điểm của PoW. Ở đây thay vì sử dụng khai thác, bạn phải có một số cổ phần (coins) trong hệ thống. Vì vậy, nếu bạn sở hữu 10% cổ phần (tiền xu), thì xác suất khai thác khối tiếp theo của bạn sẽ là 10%.
+Mining đòi hỏi rất nhiều sức mạnh tính toán để chạy các tính toán mật mã khác nhau nhằm giải quyết các thách thức tính toán. Sức mạnh tính toán chuyển thành một lượng điện cao và năng lượng cần thiết cho việc chứng minh công việc. Vào năm 2015, người ta ước tính rằng một giao dịch Bitcoin yêu cầu lượng điện cần thiết để cung cấp năng lượng cho 1,57 hộ gia đình Mỹ mỗi ngày. Vì vậy, để tiết kiệm điện năng, PoS đã được giới thiệu.</p>
+</blockquote>
+<blockquote>
+<p>Trong PoS, một đô la là một đô la. Ví dụ(so sánh với PoW): hãy xem xét 10.000 miners, mỗi người chi tiêu 1$/phút (87,6M$/năm) có thể có ít sức mạnh băm hơn một nhóm miners chi 10.000$/phút (mặc dù cũng chi tiêu 87,6M$/năm). Nhưng trong trường hợp PoS, bạn không thể sử dụng hết nó cùng một lúc. Ở đây một đô la là một đô la. Do đó, nó không dễ bị ảnh hưởng bởi lợi thế quy mô.</p>
+</blockquote>
+<blockquote>
+<p>Ngoài ra, tấn công một hệ thống PoS đắt hơn tấn công một hệ thống PoW.
+Điều này có nghĩa là bạn mất số cổ phần(coins) khi bạn thực hiện một cuộc tấn công vào hệ thống PoS, trong khi trong PoW, bạn không mất thiết bị khai thác hoặc tiền của mình nếu bạn tấn công hệ thống; thay vào đó, bạn chỉ làm cho nó (tấn công một hệ thống PoW) khó thực hiện.
+Nhưng một vấn đề có thể phát sinh là vấn đề “nothing-at-stake”, trong đó các trình tạo khối không có gì để mất bằng cách bỏ phiếu cho nhiều lịch sử blockchain (các nhánh forks), do đó ngăn cản sự đồng thuận đạt được.</p>
+</blockquote>
+<p><img src="https://hackernoon.com/hn-images/0*rBz8CQGfVrCxTivc.png" alt="nothing-at-stake">
+<em>Trong PoS, bạn có thể stake tài sản của mình ở cả hai bên của chuỗi (vấn đề “nothing-at-stake”) trong khi trong PoW, bạn không thể khai thác cả hai bên (vì nó quá khó)</em></p>
+<p>Bởi vì không giống như trong các hệ thống bằng chứng công việc (nơi bạn phải tính toán rất nhiều để mở rộng một chuỗi), có rất ít chi phí để làm việc trên một số chuỗi. Nhiều dự án đã cố gắng giải quyết vấn đề này theo những cách khác nhau. Ví dụ. như đã nêu ở trên, một trong những giải pháp là trừng phạt những validators xấu.</p>
+<ol start="3">
+<li>Delayed Proof-of-Work</li>
+</ol>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Tiết kiệm năng lượng</li>
+<li>Tăng cường bảo mật</li>
+<li>có thể gia tăng giá trị cho các blockchain khác bằng cách gián tiếp cung cấp bảo mật cho Bitcoin mà không phải trả chi phí giao dịch Bitcoin</li>
+</ul>
+</li>
+<li>Nhược điểm:
+<ul>
+<li>Chỉ các blockchain sử dụng PoW hoặc PoS mới có thể là một phần của sự đồng thuận này.</li>
+<li>Trong chế độ “Hoạt động công chứng”, tốc độ băm cho các node khác nhau (node công chứng và node bình thường) phải được hiệu chỉnh, nếu không, sự khác biệt giữa các tốc độ băm có thể bùng nổ (xem bên dưới để giải thích thêm)</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: Komodo</li>
+<li>Loại: Đồng thuận hợp tác</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Bằng chứng công việc bị trì hoãn (dPoW) là một phương pháp đồng thuận kết hợp cho phép một blockchain tận dụng lợi thế của bảo mật được cung cấp thông qua sức mạnh băm của một blockchain thứ cấp. Điều này đạt được thông qua một nhóm các node công chứng bổ sung dữ liệu từ blockchain đầu tiên vào blockchain thứ hai, sau đó sẽ yêu cầu cả hai blockchains bị xâm phạm để làm suy yếu tính bảo mật của blockchain đầu tiên. Tiên sử dụng phương pháp đồng thuận này là Komodo, được gắn với chuỗi khối Bitcoin.</p>
+</blockquote>
+<p><img src="https://hackernoon.com/hn-images/0*mAL25OaVAr-1Jzvf" alt="dPoW">
+<em>dPoW</em></p>
+<blockquote>
+<p>Blockchain dựa trên dPoW có thể sử dụng các phương pháp đồng thuận Proof of Work (PoW) hoặc Proof of Stake (PoS) để hoạt động; và nó có thể tự gắn vào bất kỳ blockchain PoW nào mong muốn. Tuy nhiên, tỷ lệ băm của Bitcoin hiện cung cấp mức độ bảo mật cao nhất cho các blockchain được bảo mật bằng dPoW. Hình minh họa bên dưới cho thấy mối quan hệ của các bản ghi riêng lẻ với chuỗi khối chính và chuỗi khối PoW đính kèm của nó:</p>
+</blockquote>
+<p><img src="https://hackernoon.com/hn-images/1*rfxNiaL3KpCPFgvFCsvpHw.png" alt="dPoW"></p>
+<p><em>dPoW</em></p>
+<blockquote>
+<p>Có hai loại node trong hệ thống dPoW: node công chứng(notary node) và node bình thường (normal node). 64 node công chứng được các bên liên quan trong chuỗi khối dPoW bầu chọn để thêm (công chứng) các khối đã được xác nhận từ chuỗi khối dPoW vào chuỗi khối PoW đính kèm. Khi một khối đã được hoàn thành, chuỗi băm của nó được thêm vào giao dịch Bitcoin được ký bởi 33 trong số các node công chứng, tạo ra bản ghi về các băm khối dPoW trên chuỗi khối Bitcoin đã được công chứng bởi phần lớn các node công chứng của mạng.
+Để ngăn chặn cuộc chiến khai thác giữa các node công chứng, điều này sẽ làm giảm hiệu quả của mạng, Komodo đã nghĩ ra một phương pháp khai thác vòng tròn hoạt động trên hai chế độ. Chế độ “No Notary - Không có công chứng” cho phép tất cả các node mạng khai thác các khối, tương tự như cơ chế đồng thuận PoW truyền thống. Tuy nhiên, trong chế độ “Hoạt động của Công chứng viên”, các công chứng viên mạng sẽ khai thác với tỷ lệ độ khó mạng giảm đáng kể. Trong chương trình này, mỗi công chứng viên được phép khai thác một khối với độ khó hiện tại của nó, trong khi các node công chứng khác phải khai thác ở mức cao hơn 10 lần và tất cả các node bình thường sẽ luôn khai thác ở mức độ khó gấp 100 lần tỷ lệ khó của các node công chứng.
+Nhưng điều này gây ra một số vấn đề. Như đã đề cập trong một cuộc trò chuyện của tôi với người sáng lập Komodo, nó có thể dẫn đến sự khác biệt cao giữa hashrate của những người khai thác công chứng(notary miners) và những người khai thác bình thường(normal miners)</p>
+</blockquote>
+<blockquote>
+<p>Hệ thống dPoW được thiết kế để cho phép blockchain tiếp tục hoạt động mà không cần các node công chứng. Trong tình huống như vậy, blockchain dPoW có thể tiếp tục hoạt động dựa trên phương pháp đồng thuận ban đầu của nó; tuy nhiên, nó sẽ không còn có tính bảo mật bổ sung của chuỗi khối đính kèm.</p>
+</blockquote>
+<p><img src="https://hackernoon.com/hn-images/1*6Qq08zfbxgg6fYz6l3yq8w.png" alt="dPoW"></p>
+<blockquote>
+<p>Do đó, Bằng chứng công việc trì hoãn cho phép tăng cường bảo mật và giảm mức sử dụng năng lượng cho bất kỳ chuỗi khối nào sử dụng phương pháp đồng thuận này. Ví dụ: vì Komodo sử dụng thuật toán băm Equihash để ngăn chặn việc khai thác bằng <a href="https://vi.gadget-info.com/84547-what-is-asic-and-how-it-has-taken-over-bitcoin-mining">ASIC</a> và nó dựa trên phương pháp khai thác vòng tròn cho các node công chứng, các biện pháp khuyến khích được cấu trúc để giảm khả năng cạnh tranh giữa các node sẽ dẫn đến việc sử dụng quá nhiều năng lượng hoặc tính toán sức mạnh.</p>
+</blockquote>
+<blockquote>
+<p>Ngoài ra, một chuỗi khối dPoW như Komodo có thể tăng giá trị cho các chuỗi khối khác bằng cách gián tiếp cung cấp bảo mật Bitcoin mà không phải trả chi phí giao dịch Bitcoin: Một chuỗi khối thứ ba sử dụng dPoW có thể tự gắn với Komodo, sau đó được gắn với Bitcoin. Bằng cách này, các chuỗi khối dPoW có thể được hưởng lợi từ tỷ lệ băm cao của Bitcoin mà không cần phải gắn trực tiếp vào chuỗi khối Bitcoin.</p>
+</blockquote>
+<blockquote>
+<p>Cuối cùng, các chức năng được tách biệt của các node công chứng và các node bình thường trong hệ thống đảm bảo rằng cơ chế đồng thuận ban đầu tiếp tục hoạt động trong trường hợp các node công chứng bị lỗi. Sự phụ thuộc lẫn nhau này tạo ra động lực cho các mạng khác hỗ trợ việc duy trì liên tục mạng Bitcoin mà không hoàn toàn phụ thuộc vào chức năng trực tiếp của nó.</p>
+</blockquote>
+<ol start="4">
+<li>Delegated Proof-of-Stake
+<img src="https://ucarecdn.com/2c41d5d7-20f6-47bf-8e99-160b7a0c14f1/" alt="dPoS"></li>
+</ol>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Tiết kiệm năng lượng.</li>
+<li>Nhanh.</li>
+</ul>
+</li>
+<li>Nhược điểm:
+<ul>
+<li>Có một chút tập trung.</li>
+<li>Những người tham gia có lượng staking cao có thể tự bỏ phiếu để trở thành validator.</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: BitShares, Steemit, EOS, Lisk, Ark</li>
+<li>Loại: Đồng thuận hợp tác</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Trong DPoS, những người có liên quan trong hệ thống có thể bầu ra các nhà lãnh đạo (nhân chứng), những người sẽ bỏ phiếu thay cho họ. Điều này làm cho nó nhanh hơn PoS bình thường.</p>
+</blockquote>
+<blockquote>
+<p>Ví dụ. trong trường hợp EOS, 21 nhân chứng được bầu chọn cùng một lúc và một nhóm các node (nhân chứng tiềm năng) được giữ ở chế độ chờ để nếu ai đó trong các node nhân chứng chết hoặc thực hiện một số hoạt động độc hại, thì nó có thể được thay thế bằng một node mới ngay lập tức . Các nhân chứng được trả một khoản phí để tạo ra các khối. Phí do những người staking quy định.</p>
+</blockquote>
+<blockquote>
+<p>Thông thường tất cả các node tạo ra các khối tại một thời điểm theo kiểu vòng tròn. Điều này ngăn một node xuất bản các khối liên tiếp, ngăn anh ta thực hiện các cuộc tấn công <a href="https://cryptoviet.com/double-spending-la-gi">double-spending</a>. Nếu một nhân chứng không tạo ra một khối trong khe thời gian của họ, thì khoảng thời gian đó sẽ bị bỏ qua và nhân chứng tiếp theo tạo ra khối tiếp theo. Nếu một nhân chứng liên tục bỏ lỡ các khối của anh ta hoặc công bố các giao dịch không hợp lệ thì những người đặt cược sẽ bỏ phiếu cho anh ta và thay thế anh ta bằng một nhân chứng tốt hơn.</p>
+</blockquote>
+<blockquote>
+<p>Trong DPoS, miners có thể cộng tác để tạo ra các khối thay vì cạnh tranh như trong PoW và PoS. Bằng cách tập trung một phần vào việc tạo ra các khối, DPoS có thể chạy các lệnh có quy mô nhanh hơn hầu hết các thuật toán đồng thuận khác. EOS (sử dụng dPoS) là blockchain đầu tiên đạt được thời gian khối là 0,5 giây !.
+Nhanh thật.</p>
+</blockquote>
+<ol start="5">
+<li>Proof-of-Authority (Bằng chứng về thẩm quyền)
+<img src="https://affidaty.io/blog/wp-content/uploads/2019/08/POA-ENG-1-768x520.jpg" alt="PoA"></li>
+</ol>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Tiết kiệm năng lượng.</li>
+<li>Nhanh.</li>
+</ul>
+</li>
+<li>Nhược điểm:
+<ul>
+<li>Một chút tập trung.</li>
+<li>Có thể được sử dụng trong các chuỗi khối công khai nhưng thường được sử dụng trong các chuỗi khối riêng tư, được cấp phép.</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: POA.Network, Ethereum Kovan testnet, VeChain</li>
+<li>Loại: Đồng thuận hợp tác</li>
+<li>Giải thích:
+Trong các mạng dựa trên PoA, các giao dịch và khối được xác thực bởi các tài khoản được phê duyệt, được gọi là trình xác thực. Trình xác thực chạy phần mềm cho phép họ đưa các giao dịch vào các khối. Quá trình này được tự động hóa và không yêu cầu người xác nhận phải liên tục giám sát máy tính của họ. Tuy nhiên, nó yêu cầu duy trì máy tính (node quyền hạn) không bị xâm phạm.</li>
+</ul>
+<p>Ba điều kiện chính phải được đáp ứng để thiết lập trình xác nhận là:</p>
+<blockquote>
+<ul>
+<li>Danh tính phải được xác minh chính thức trên chuỗi, với khả năng kiểm tra chéo thông tin trong một miền có sẵn công khai</li>
+<li>Tính đủ điều kiện phải khó đạt được, để có quyền xác nhận các khối kiếm được và có giá trị. (Ví dụ: người xác nhận tiềm năng được yêu cầu phải có giấy phép công chứng)</li>
+<li>Phải có sự thống nhất hoàn toàn trong việc kiểm tra và thủ tục để thiết lập một cơ quan có thẩm quyền</li>
+</ul>
+</blockquote>
+<p>Với PoA, các cá nhân có quyền trở thành validator, do đó, có động cơ để duy trì vị trí mà họ đã đạt được. Bằng cách gắn danh tiếng với danh tính, người xác thực được khuyến khích duy trì quy trình giao dịch, vì họ không muốn danh tính của mình gắn liền với danh tiếng tiêu cực, do đó mất vai trò người xác thực khó kiếm được.</p>
+<ol start="6">
+<li>Proof-of-Weight(Bằng chứng về trọng lượng)</li>
+</ol>
+<p><img src="https://cryptomaniaks.com/sites/default/files/pictures/proof-of-weight-compressed.gif" alt="PoWeight"></p>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Tiết kiệm năng lượng.</li>
+<li>Có thể tùy chỉnh cao và có thể mở rộng.</li>
+</ul>
+</li>
+<li>Nhược điểm:
+<ul>
+<li>Khuyến khích có thể khó.</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: Algorand</li>
+<li>Loại: Đồng thuận cạnh tranh</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Proof-of-Weight là một phân loại rộng rãi của các thuật toán đồng thuận dựa trên mô hình đồng thuận Algorand. Ý tưởng chung là trong PoS, tỷ lệ phần trăm mã thông báo sở hữu trong mạng của bạn thể hiện xác suất &quot;discovering-khám phá&quot; khối tiếp theo của bạn, trong hệ thống PoWeight, một số giá trị tương đối có trọng số khác được sử dụng. Một số triển khai của nó là Proof of Reputation và Proof of Space.</p>
+</blockquote>
+<ol start="7">
+<li>Proof of Reputation(Bằng chứng về danh tiếng)</li>
+</ol>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Tốt cho các mạng riêng tư, được phép.</li>
+</ul>
+</li>
+<li>Nhược điểm:
+<ul>
+<li>Chỉ được sử dụng trong các blockchain riêng tư, được cấp phép.</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: GoChain</li>
+<li>Loại: Đồng thuận hợp tác</li>
+<li><a href="https://arxiv.org/pdf/1806.07342.pdf">Giải thích</a>:</li>
+</ul>
+<blockquote>
+<p>Tương tự như Proof of Authority. Như GoChain đã đề cập:
+Mô hình đồng thuận Proof of Reputation (PoR) phụ thuộc vào danh tiếng của những người tham gia để giữ an toàn cho mạng. Một người tham gia (a block signer-người ký khối) phải có danh tiếng đủ quan trọng để họ phải đối mặt với những hậu quả đáng kể về tài chính và thương hiệu nếu họ cố gắng gian lận hệ thống. Đây là một khái niệm tương đối vì hầu như tất cả các doanh nghiệp sẽ bị thiệt hại đáng kể nếu họ bị bắt quả tang cố gắng gian dối, nhưng các công ty lớn hơn thường sẽ có nhiều thứ để mất hơn và do đó được lựa chọn hơn các công ty ít sử dụng hơn (các doanh nghiệp nhỏ hơn).
+Khi một công ty chứng minh được danh tiếng và vượt qua xác minh, họ có thể được bình chọn vào mạng như một node có thẩm quyền và tại thời điểm này, nó hoạt động giống như mạng Bằng chứng về quyền (PoA), nơi chỉ các node có thẩm quyền mới có thể ký và xác nhận các khối.</p>
+</blockquote>
+<ol start="8">
+<li>Proof of Elapsed Time (Bằng chứng về thời gian đã trôi qua)</li>
+</ol>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Chi phí tham gia thấp, do đó nhiều người hơn có thể tham gia dễ dàng, do đó được phân cấp.</li>
+<li>Thật đơn giản cho tất cả những người tham gia để xác minh rằng người lãnh đạo đã được lựa chọn một cách hợp pháp.</li>
+<li>Chi phí cho việc kiểm soát quá trình bầu cử lãnh đạo tỷ lệ thuận với giá trị thu được từ nó.</li>
+</ul>
+</li>
+<li>Nhược điểm:
+<ul>
+<li>Mặc dù nó rẻ nhưng bạn phải sử dụng phần cứng chuyên dụng. Do đó không thể được áp dụng đại trà.</li>
+<li>Không phù hợp với các blockchain công khai.</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: HyperLedger Sawtooth</li>
+<li>Loại: Đồng thuận cạnh tranh</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>PoET là một thuật toán cơ chế đồng thuận thường được sử dụng trên các mạng blockchain được cấp phép để quyết định quyền khai thác hoặc người chiến thắng khối trên mạng. Các mạng blockchain được phép là những mạng yêu cầu bất kỳ người tham gia tiềm năng nào phải xác định danh tính bản thân trước khi họ được phép tham gia. Dựa trên nguyên tắc của một hệ thống xổ số công bằng trong đó mọi node đơn lẻ đều có khả năng là người chiến thắng như nhau, cơ chế PoET dựa trên việc phân chia cơ hội chiến thắng một cách công bằng cho số lượng người tham gia mạng lớn nhất có thể.</p>
+</blockquote>
+<blockquote>
+<p>Hoạt động của thuật toán PoET như sau. Mỗi node tham gia trong mạng được yêu cầu đợi trong một khoảng thời gian được chọn ngẫu nhiên và node đầu tiên hoàn thành thời gian chờ được chỉ định sẽ thắng khối mới. Mỗi node trong mạng blockchain tạo ra thời gian chờ ngẫu nhiên và chuyển sang chế độ ngủ trong khoảng thời gian được chỉ định đó. Người thức dậy đầu tiên - tức là người có thời gian chờ ngắn nhất - thức dậy và cam kết một khối mới cho blockchain, phát thông tin cần thiết cho toàn bộ mạng ngang hàng. Quá trình tương tự sau đó lặp lại để phát hiện ra khối tiếp theo.</p>
+</blockquote>
+<blockquote>
+<p>Cơ chế đồng thuận của mạng PoET cần đảm bảo hai yếu tố quan trọng. Đầu tiên, các node tham gia thực sự chọn thời gian thực sự là ngẫu nhiên và không phải là khoảng thời gian ngắn hơn do những người tham gia cố ý chọn để giành chiến thắng. Hai là người chiến thắng đã thực sự hoàn thành thời gian chờ đợi.</p>
+</blockquote>
+<blockquote>
+<p>Cơ chế sâu sắc cho phép các ứng dụng thực thi mã đáng tin cậy trong một môi trường được bảo vệ và điều này đảm bảo rằng cả hai yêu cầu - để chọn ngẫu nhiên thời gian chờ cho tất cả các node tham gia và hoàn thành thực sự thời gian chờ của người tham gia chiến thắng - đều được đáp ứng.</p>
+</blockquote>
+<blockquote>
+<p>Cơ chế chạy mã tin cậy trong một môi trường an toàn cũng quan tâm đến nhiều nhu cầu thiết yếu khác của mạng. Nó đảm bảo rằng mã đáng tin cậy thực sự chạy trong môi trường an toàn và không thể thay đổi bởi bất kỳ người tham gia bên ngoài nào. Nó cũng đảm bảo rằng các kết quả có thể được xác minh bởi những người tham gia và thực thể bên ngoài, do đó nâng cao tính minh bạch của sự đồng thuận của mạng lưới.</p>
+</blockquote>
+<blockquote>
+<p>PoET kiểm soát chi phí của quy trình đồng thuận và giữ cho nó nhanh nhẹn để chi phí vẫn tỷ lệ thuận với giá trị thu được từ quy trình, một yêu cầu quan trọng để nền kinh tế tiền điện tử tiếp tục phát triển.</p>
+</blockquote>
+<ol start="9">
+<li>Proof-of-space (PoSpace) hay còn gọi là proof-of-capacity (PoC)
+<img src="https://miro.medium.com/max/1072/0*cTn0KjZxAS1NUmBe.jpg" alt="PoC"></li>
+</ol>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Tương tự như PoW nhưng sử dụng không gian thay vì tính toán. Do đó rất thân thiện với môi trường.</li>
+<li>Có thể được sử dụng để phát hiện phần mềm độc hại, bằng cách xác định xem bộ nhớ đệm L1 của bộ xử lý có trống không (ví dụ: có đủ dung lượng để đánh giá quy trình PoSpace mà không bỏ sót bộ nhớ cache) hay chứa một quy trình chống lại việc bị loại bỏ.</li>
+<li>Có thể được sử dụng cho các biện pháp chống thư rác và phòng chống tấn công từ chối dịch vụ.</li>
+</ul>
+</li>
+<li>Nhược điểm:
+<ul>
+<li>Incentivization</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: Burstcoin, Chia, SpaceMint</li>
+<li>Loại: Đồng thuận hợp tác</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Proof-of-space (PoSpace), còn được gọi là bằng chứng về dung lượng (PoC), là một phương tiện thể hiện rằng một người có lợi ích hợp pháp đối với một dịch vụ (chẳng hạn như gửi email) bằng cách phân bổ một số tiền không nhỏ bộ nhớ hoặc dung lượng đĩa để giải quyết một thách thức do nhà cung cấp dịch vụ đưa ra. Khái niệm này được xây dựng bởi Dziembowski và cộng sự. vào năm 2015. (Bài báo của Ateniese và cộng sự, đồng thời có tiêu đề Proof-of-space, trên thực tế là một giao thức Proof-of-work khó có bộ nhớ).</p>
+</blockquote>
+<blockquote>
+<p>Bằng chứng về không gian rất giống với bằng chứng về công việc, ngoại trừ việc thay vì tính toán, lưu trữ được sử dụng. Proof-of-space có liên quan đến, nhưng cũng khác đáng kể với, các chức năng khó có bộ nhớ và các bằng chứng về khả năng truy xuất.</p>
+</blockquote>
+<blockquote>
+<p>Bằng chứng về không gian là một phần dữ liệu mà một câu tục ngữ gửi đến một người xác minh để chứng minh rằng câu tục ngữ đã dành một khoảng không gian nhất định. Để thực tế, quy trình xác minh cần phải hiệu quả, cụ thể là tiêu tốn một lượng nhỏ không gian và thời gian. Đối với tính hợp lý, câu tục ngữ sẽ khó có thể vượt qua xác minh nếu nó không thực sự dành đủ dung lượng đã được xác nhận. Một cách để triển khai PoSpace là sử dụng các đồ thị khó làm bằng đá cuội. Người xác minh yêu cầu câu châm ngôn xây dựng nhãn hiệu của một đồ thị khó có thể cắt được. Câu tục ngữ cam kết về việc dán nhãn. Người xác minh sau đó yêu cầu người châm ngôn mở một số vị trí ngẫu nhiên trong cam kết.</p>
+</blockquote>
+<blockquote>
+<p>Bằng chứng về không gian được coi là một giải pháp thay thế xanh hơn và công bằng hơn do tính chất mục đích chung của lưu trữ và chi phí năng lượng thấp hơn yêu cầu của lưu trữ.</p>
+</blockquote>
+<ol start="10">
+<li>Proof of History(Bằng chứng lịch sử)</li>
+</ol>
+<p><img src="https://www.mobileappdaily.com/public/uploads/mad_11239cd59a5.png" alt="PoH"></p>
+<p><em>Proof of History Timestamps</em></p>
+<ul>
+<li>Được sử dụng bởi: Solana</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Ý tưởng cơ bản ở đây là thay vì tin tưởng vào dấu thời gian trên giao dịch, bạn có thể chứng minh rằng giao dịch đó đã xảy ra trước và sau một sự kiện.</p>
+</blockquote>
+<blockquote>
+<p>Khi bạn chụp một bức ảnh với trang bìa của New York Times, bạn đang tạo ra một bằng chứng rằng bức ảnh của bạn được chụp sau khi tờ báo đó được xuất bản, hoặc bạn có một số cách để ảnh hưởng đến những gì New York Times xuất bản. Với Proof of History, bạn có thể tạo một bản ghi lịch sử chứng minh rằng một sự kiện đã xảy ra tại một thời điểm cụ thể.</p>
+</blockquote>
+<p><b>Dấu thời gian bằng chứng về lịch sử</b></p>
+<blockquote>
+<p>Bằng chứng lịch sử là một chức năng trì hoãn có thể xác minh được tần số cao. Chức năng Độ trễ có thể xác minh được yêu cầu một số bước tuần tự cụ thể để đánh giá, nhưng vẫn tạo ra một đầu ra duy nhất có thể được xác minh một cách hiệu quả và công khai.
+Việc triển khai cụ thể này sử dụng một hàm băm kháng trước hình ảnh tuần tự chạy qua chính nó liên tục với đầu ra trước đó được sử dụng làm đầu vào tiếp theo. Định kỳ số đếm và đầu ra hiện tại được ghi lại.</p>
+</blockquote>
+<blockquote>
+<p>Đối với hàm băm SHA256, quá trình này không thể song song mà không có cuộc tấn công bạo lực sử dụng 2¹²⁸ lõi.
+Sau đó, chúng ta có thể chắc chắn rằng thời gian thực đã trôi qua giữa mỗi bộ đếm khi nó được tạo và thứ tự được ghi lại của mỗi bộ đếm giống như trong thời gian thực.</p>
+</blockquote>
+<ol start="11">
+<li>Proof of Stake Velocity</li>
+</ol>
+<ul>
+<li>Được sử dụng bởi: Reddcoin</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Proof of Stake Velocity (PoSV) được đề xuất thay thế cho Proof of Work (PoW) và Proof of Stake (PoS) để bảo mật mạng ngang hàng và xác nhận các giao dịch của Reddcoin, một loại tiền điện tử được tạo ra đặc biệt để tạo điều kiện cho xã hội tương tác trong thời đại kỹ thuật số. PoSV được thiết kế để khuyến khích cả quyền sở hữu (Cổ phần) và hoạt động (Vận tốc) tương ứng trực tiếp với hai chức năng chính của Reddcoin như một loại tiền tệ thực: lưu trữ giá trị và phương tiện trao đổi. Reddcoin cũng có thể hoạt động như một đơn vị tài khoản trong bối cảnh xã hội không đồng nhất.</p>
+</blockquote>
+<ol start="12">
+<li>Proof of Importance (Bằng chứng về tầm quan trọng)
+<img src="https://www.btcwires.com/wp-content/uploads/Why_Proof_of_Importance-01.png" alt="PoI"></li>
+</ol>
+<ul>
+<li>Ưu điểm:
+<ul>
+<li>Tốt hơn PoS trong việc đánh giá cổ phần.</li>
+</ul>
+</li>
+<li>Được sử dụng bởi: NEM</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Mạng lưới đồng thuận của NEM không chỉ phụ thuộc vào số lượng tiền xu mà còn phụ thuộc vào khả năng hoạt động của hệ thống hiệu quả sẽ được trả công. Cơ hội đặt cược một khối là một thành phần của nhiều yếu tố khác nhau, bao gồm danh tiếng (được kiểm soát bởi một khuôn khổ được thiết kế cho mục đích khác), số dư và số lượng giao dịch được thực hiện đến và đi từ vị trí đó. Đây được gọi là tính toán mức độ quan trọng. Điều này mang lại hình ảnh toàn diện hơn về thành viên hệ thống 'hữu ích'.</p>
+</blockquote>
+<blockquote>
+<p>Để đủ điều kiện cho phép tính mức độ quan trọng, người dùng cần có ít nhất 10.000 XEM trong số dư của họ. Xem xét chỉ có dưới 9 tỷ XEM đang lưu hành, việc đạt được mục tiêu đó không phải là quá tốn kém. Có thể ngưỡng 10.000 XEM này sẽ bị thay đổi trong tương lai, nhưng hiện tại, nó vẫn vậy. Nhưng việc tính toán mức độ quan trọng được thực hiện bằng cách sử dụng một thuật toán cụ thể, không chỉ bằng xác suất và kích thước cổ phiếu của chúng.</p>
+</blockquote>
+<blockquote>
+<p>Điều quan trọng cần lưu ý là bằng chứng tầm quan trọng của NEM có khả năng chống lại việc thao túng tùy tiện. Các cuộc tấn công Sybil và các cuộc tấn công vòng lặp được giảm thiểu bằng cách sử dụng các cơ chế cơ bản của sự đồng thuận. Điều quan trọng không kém cần nhớ là bằng chứng về tầm quan trọng không phải là bằng chứng về tiền đặt cọc, mặc dù rất dễ để rút ra sự tương đồng giữa hai điều này.</p>
+</blockquote>
+<ol start="13">
+<li>Proof of Burn
+<img src="https://miro.medium.com/max/1204/1*4ze-9kcQOoFuWFamjxjtRQ.png" alt="PoB"></li>
+</ol>
+<ul>
+<li>Được sử dụng bởi: Slimcoin, TGCoin</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Với Proof of Burn, thay vì đổ tiền vào thiết bị máy tính đắt tiền, bạn 'đốt' tiền bằng cách gửi chúng đến một địa chỉ mà chúng không thể thu hồi được. Bằng cách cam kết đồng tiền của bạn không bao giờ được trả lại, bạn kiếm được đặc quyền suốt đời để khai thác trên hệ thống dựa trên quy trình lựa chọn ngẫu nhiên.
+Tùy thuộc vào cách triển khai bằng chứng ghi, các thợ đào có thể đốt coin trên chuỗi chính hoặc coin của một chuỗi thay thế, chẳng hạn như bitcoin. Bạn đốt càng nhiều tiền, bạn càng có cơ hội được chọn để khai thác khối tiếp theo.
+Theo thời gian, tiền đặt cược của bạn trong hệ thống giảm dần, vì vậy cuối cùng bạn sẽ muốn đốt thêm tiền để tăng tỷ lệ được chọn trong xổ số. (Điều này bắt chước quy trình khai thác của bitcoin, nơi bạn phải liên tục đầu tư vào thiết bị máy tính hiện đại hơn để duy trì sức mạnh hàm băm.)
+Mặc dù bằng chứng ghi là một sự thay thế thú vị cho bằng chứng công việc, nhưng giao thức này vẫn lãng phí tài nguyên một cách không cần thiết. Một lời chỉ trích khác là sức mạnh khai thác chỉ đơn giản đến với những người sẵn sàng đốt nhiều tiền hơn.</p>
+</blockquote>
+<ol start="14">
+<li>Proof of Identity</li>
+</ol>
+<ul>
+<li>Giải thích: Bằng chứng nhận dạng (PoI) là bằng chứng mật mã (phần dữ liệu) cho biết rằng bất kỳ người dùng nào cũng biết khóa riêng tư so với danh tính được ủy quyền và được gắn bằng mật mã vào một giao dịch cụ thể. Mọi cá nhân từ một số nhóm có thể tạo PoF (chỉ một khối dữ liệu) và trình bày nó cho bất kỳ ai, chẳng hạn như node xử lý.</li>
+</ul>
+<ol start="15">
+<li>Proof Of Activity</li>
+</ol>
+<p><img src="https://miro.medium.com/max/1838/1*jWlGrYH-TqHZ201pyj7gxw.png" alt="PoA"></p>
+<ul>
+<li>Được sử dụng bởi: Decred</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Để tránh lạm phát phi mã (điều gì xảy ra khi quá nhiều tiền tệ làm ngập hệ thống) bitcoin sẽ chỉ tạo ra 21 triệu bitcoin. Điều đó có nghĩa là, tại một thời điểm nào đó, trợ cấp phần thưởng khối bitcoin sẽ kết thúc và những người khai thác bitcoin sẽ chỉ nhận được phí giao dịch.</p>
+</blockquote>
+<blockquote>
+<p>Trong bằng chứng hoạt động, khai thác bắt đầu theo kiểu bằng chứng công việc truyền thống, với các thợ đào chạy đua để giải một câu đố mật mã. Tùy thuộc vào việc triển khai, các khối được khai thác không chứa bất kỳ giao dịch nào (chúng giống với các mẫu hơn), do đó, khối chiến thắng sẽ chỉ chứa tiêu đề và địa chỉ phần thưởng của người khai thác.</p>
+</blockquote>
+<blockquote>
+<p>Tại thời điểm này, hệ thống chuyển sang bằng chứng cổ phần. Dựa trên thông tin trong tiêu đề, một nhóm trình xác nhận ngẫu nhiên được chọn để ký vào khối mới. Người xác thực sở hữu càng nhiều tiền trong hệ thống, thì người đó càng có nhiều khả năng được chọn. Mẫu trở thành một khối chính thức ngay sau khi tất cả các trình xác thực ký tên vào nó.</p>
+</blockquote>
+<blockquote>
+<p>Nếu một số trình xác thực đã chọn không có sẵn để hoàn thành khối, thì khối chiến thắng tiếp theo sẽ được chọn, một nhóm trình xác nhận mới sẽ được chọn, v.v. cho đến khi một khối nhận được số lượng chữ ký chính xác. Phí được phân chia giữa người khai thác và người xác nhận đã ký vào khối.</p>
+</blockquote>
+<blockquote>
+<p>Các chỉ trích về bằng chứng hoạt động cũng giống như đối với cả bằng chứng về công việc (cần quá nhiều năng lượng để khai thác các khối) và bằng chứng về cổ phần (không có gì để ngăn cản người xác nhận ký hai lần).</p>
+</blockquote>
+<ol start="16">
+<li>Proof of Time
+<img src="" alt="PoT"></li>
+</ol>
+<ul>
+<li>
+<p>Được sử dụng bởi: Chronologic</p>
+</li>
+<li>
+<p>Giải thích:</p>
+</li>
+</ul>
+<blockquote>
+<p>Bằng chứng về thời gian được giới thiệu bởi Chronologic. Họ đang có kế hoạch xây dựng một blockchain riêng biệt. Như đã nêu bởi nhà phát triển chính của họ:
+Vấn đề ở đây là số lượng lớn nhất có thể được lưu trữ trong một biến ở độ vững chắc có độ lớn là 1076. Điều này gây khó khăn cho chúng tôi khi làm việc với thời gian và việc tạo ra các mã thông báo.</p>
+</blockquote>
+<ol start="17">
+<li>Proof of Existence</li>
+</ol>
+<p><img src="https://miro.medium.com/max/1400/1*8HriYqKzC1X5ebJXUH-9bA.png" alt="PoE"></p>
+<ul>
+<li>Bằng chứng về sự tồn tại</li>
+<li>Được sử dụng bởi: <a href="http://Poex.io">Poex.io</a>, HeroNode, DragonChain</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Proof of Existence là một dịch vụ trực tuyến xác minh sự tồn tại của các tệp máy tính tại một thời điểm cụ thể thông qua các giao dịch được đánh dấu thời gian trong chuỗi khối bitcoin.
+Nó được đưa ra vào năm 2013 dưới dạng một dự án mã nguồn mở. Nó được phát triển bởi Manuel Araoz và Esteban Ordano.</p>
+</blockquote>
+<ul>
+<li>Trường hợp sử dụng:
+<ul>
+<li>Thỏa thuận ký số mà không tiết lộ nội dung thực tế.</li>
+<li>Chứng minh quyền sở hữu dữ liệu mà không tiết lộ dữ liệu thực tế.</li>
+<li>Thời gian đóng dấu tài liệu.</li>
+<li>Chứng minh quyền sở hữu</li>
+</ul>
+</li>
+</ul>
+<ol start="18">
+<li>Proof of Retrievability
+<img src="https://static-01.hindawi.com/articles/wcmc/volume-2018/4186243/figures/4186243.fig.001.svgz" alt="PoR"></li>
+</ol>
+<ul>
+<li>Được sử dụng bởi: Microsoft</li>
+<li>Giải thích:</li>
+</ul>
+<blockquote>
+<p>Bằng chứng về khả năng truy xuất (POR) là một bằng chứng nhỏ gọn của hệ thống tệp (phương thức) đối với máy khách (người xác minh) rằng tệp đích F là nguyên vẹn, theo nghĩa là máy khách có thể khôi phục hoàn toàn. Vì POR có độ phức tạp truyền thông thấp hơn so với truyền của chính F, chúng là một khối xây dựng hấp dẫn cho các hệ thống lưu trữ từ xa có độ đảm bảo cao. Nó có thể thực sự hữu ích như một thuật toán đồng thuận cho các hệ thống Điện toán đám mây.</p>
+</blockquote>
+<ol start="19">
+<li>Proof of Believability(Bằng chứng về độ tin cậy)
+<img src="https://miro.medium.com/max/1838/0*OZdTXa6OiM-9nq98" alt="PoB"></li>
+</ol>
+<ul>
+<li>
+<p>Ưu điểm:</p>
+<ul>
+<li>Phân cấp hơn PoS truyền thống đó bằng cách sử dụng khái niệm Servi.</li>
+<li>Kết thúc nhanh so với PoS truyền thống.</li>
+</ul>
+</li>
+<li>
+<p>Được sử dụng bởi: IOST</p>
+</li>
+<li>
+<p>Giải thích:</p>
+<p>Một thách thức lớn mà cơ chế đồng thuận Proof-of-Stake truyền thống phải đối mặt là xu hướng tập trung hóa. Để giảm thiểu rủi ro này, IOST đã giới thiệu Servi vừa là thước đo mức độ đóng góp của người dùng cho cộng đồng vừa là một cách để khuyến khích các thành viên đóng góp vào sự phát triển liên tục của IOSChain. Nó có các thuộc tính sau:</p>
+<ul>
+<li><b>Không thể giao dịch</b>: Vì Servi không được thiết kế như một phương tiện trao đổi, Servi không thể được mua bán hoặc trao đổi dưới bất kỳ hình thức nào.</li>
+<li><b>Tự hủy</b>: Sau khi xác thực một khối, hệ thống sẽ tự động xóa số dư Servi do người xác thực sở hữu. Bằng cách này, các node có điểm đáng tin cậy cao có thể thay phiên nhau xác nhận các khối, để đảm bảo quá trình tạo khối công bằng.</li>
+<li><b>Tự phát hành</b>: Servi sẽ tự động được tạo và gửi vào tài khoản người dùng sau một số đóng góp nhất định, chẳng hạn như cung cấp dịch vụ cộng đồng, đánh giá dịch vụ do một tổ chức khác cung cấp và / hoặc đóng góp đặc biệt khác.</li>
+</ul>
+<p>Các hệ thống blockchain truyền thống có sự đánh đổi cố hữu giữa an toàn và thông lượng, tùy thuộc vào kích thước phân đoạn. Một hệ thống với số lượng lớn các phân đoạn nhỏ mang lại hiệu suất tốt hơn nhưng cung cấp khả năng phục hồi kém hơn trước các tác nhân xấu và ngược lại (Một trong những vấn đề mà Casper cũng phải đối mặt). Để phá vỡ sự đánh đổi theo cách giữ an toàn và tăng thông lượng, IOST đã đề xuất một giao thức đồng thuận Proof-of-Believability (PoB) sáng tạo cho IOSChain. PoB đảm bảo rằng các node có xác suất hoạt động sai không đáng kể, đồng thời tăng đáng kể thông lượng giao dịch theo kích thước-một-phân đoạn.</p>
+<p>Giao thức đồng thuận Proof-of-Believability sử dụng phương pháp tiếp cận Tin tưởng - Đầu tiên trong phân đoạn. Giao thức chia tất cả các trình xác nhận thành hai nhóm, một liên minh đáng tin cậy và một liên minh bình thường. Trình xác thực đáng tin cậy xử lý giao dịch nhanh chóng trong giai đoạn đầu tiên. Sau đó, trình xác thực thông thường lấy mẫu và xác minh các giao dịch trong giai đoạn thứ hai để cung cấp tính chính xác và đảm bảo khả năng xác minh. Cơ hội để một node được bầu chọn vào giải đấu đáng tin cậy được xác định bằng điểm đáng tin cậy được tính bằng nhiều yếu tố (ví dụ: số dư mã thông báo, đóng góp cho cộng đồng, đánh giá, v.v.). Một người có điểm số đáng tin cậy cao hơn có nhiều khả năng được bầu vào giải đấu đáng tin cậy hơn. Người xác nhận đáng tin cậy tuân theo các thủ tục để quyết định tập hợp các giao dịch đã cam kết và thứ tự của chúng, cũng như xử lý chúng theo thứ tự. Trình xác thực đáng tin cậy cũng tạo thành các nhóm nhỏ hơn - một trình xác nhận cho mỗi nhóm. Các giao dịch sẽ được phân phối ngẫu nhiên giữa các trình xác thực đáng tin cậy này. Do đó, chúng tạo ra các khối nhỏ hơn với độ trễ cực thấp.
+Tuy nhiên, nó có thể gây ra vấn đề bảo mật vì chỉ có một node đang thực hiện xác minh. Do đó, một số giao dịch bị hỏng có thể được thực hiện bởi các trình xác thực hoạt động sai. Để giải quyết vấn đề bảo mật này, họ chỉ định xác suất lấy mẫu mà các trình xác nhận thông thường sẽ lấy mẫu các giao dịch và phát hiện sự không nhất quán. Nếu trình xác thực bị phát hiện là hành vi sai, nó sẽ mất tất cả các mã thông báo và danh tiếng trong hệ thống trong khi những người dùng bị lừa đảo sẽ được bồi thường cho bất kỳ tổn thất nào. Phương pháp đầu tiên đáng tin cậy làm cho việc xử lý các giao dịch cực kỳ nhanh chóng vì chỉ có một trình xác thực (đáng tin cậy) duy nhất đang thực hiện xác minh và nó không có khả năng hoạt động sai.</p>
+</li>
+</ul>
+
+<h4>Nguồn tham khảo</h5>
+<ul>
+    <li>https://hackernoon.com/consensuspedia-an-encyclopedia-of-29-consensus-algorithms-e9c4b4b7d08f</li>
+    <li>https://101blockchains.com/consensus-algorithms-blockchain/#1</li>
+    <li>https://tokens-economy.gitbook.io/consensus/chain-based-proof-of-work/delayed-proof-of-work-dpow</li>
+</ul>
+    </body>
+    </html>
