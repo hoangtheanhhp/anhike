@@ -38,6 +38,10 @@
   - Bulk — Bulk retrievals are Glacier’s lowest-cost retrieval option, which you can use to retrieve large amounts, even petabytes, of data inexpensively in a day. Bulk retrievals typically complete within 5–12 hours.
 - [S3 CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistS3AndCustomOrigins.html)
 - [Cross region replication(CRR) or Same region replication(SRR)](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html#replication-requirements)
+- The file gateway employs a local read/write cache to provide a low-latency access to data for file share clients in the same local area network (LAN) as the file gateway.
+Good read - https://d0.awsstatic.com/whitepapers/aws-storage-gateway-file-gateway-for-hybrid-architectures.pdf
+
+- Amazon S3 Standard-Infrequent Access
 
 ## Amazon Kinesis
 + Amazon Kinesis Data Firehose is a fully managed service for delivering real-time streaming data to destinations such as Amazon Simple Storage Service (Amazon S3), Amazon Redshift, Amazon Elasticsearch Service (Amazon ES), and Splunk. Kinesis Data Firehose is part of the Kinesis streaming data platform, along with Kinesis Data Streams, Kinesis Video Streams, and Amazon Kinesis Data Analytics. With Kinesis Data Firehose, you don't need to write applications or manage resources. You configure your data producers to send data to Kinesis Data Firehose, and it automatically delivers the data to the destination that you specified. You can also configure Kinesis Data Firehose to transform your data before delivering it
@@ -46,7 +50,11 @@
 - [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html)
 - [Compare NAT gateways and NAT instances](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html)
 - [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints.html)
-
+# [Network ALC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
+- You can only create deny rules with network ACLs, it is not possible with security groups.
+Network ACLs process rules in order from the lowest numbered rules to the highest until they reach
+and allow or deny. The following table describes some of the differences between security groups
+and network ACLs
 ## Lamda
 - [ENV variable](https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html)
 
@@ -60,3 +68,6 @@
 - The visibility timeout begins when Amazon SQS returns a message. During this time, the consumer processes and deletes the message. However, if the consumer fails before deleting the message and your system doesn't call the DeleteMessage action for that message before the visibility timeout expires, the message becomes visible to other consumers and the message is received again. If a message must be received only once, your consumer should delete it within the duration of the visibility timeout.
 
 - [sqs-visibility-timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html)
+
+## Route53
+- Geolocation routing policy – Use when you want to route traffic based on the location of your users. Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
