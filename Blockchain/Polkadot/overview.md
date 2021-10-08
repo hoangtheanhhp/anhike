@@ -28,3 +28,7 @@ BABE and GRANDPA that do these respectively.
 
 Do những yêu cầu này, chúng tôi đã chọn tách các cơ chế tiến triển khối và tạo khối càng nhiều càng tốt. Trong hai phần tiếp theo, chúng tôi mô tả các giao thức
 BABE và GRANDPA tương ứng làm được những điều này.
+
+## 4.3.1 Blind Assignment for Blockchain Extension (BABE)
+
+Trong Polkadot, chúng tôi tạo các block trong relay chain bằng cách sử dụng Blind Assignment for Blockchain Extension protocol (BABE). BABE chỉ định các validator một cách ngẫu nhiên để chặn việc tạo khối một cách ngẫu nhiên. Thời điểm sản xuất khối là sự phân chia thời gian khi nhà sản xuất khối có thể tạo ra một khối. Lưu ý, thời gian đó không được thống nhất trên toàn cầu, mà chúng tôi sẽ giải quyết sau. Những các nhiệm vụ hoàn toàn riêng tư cho đến khi validator được chỉ định tạo ra các khối của chúng. Do đó, chúng tôi sử dụng “Blind Assignment” trong tên giao thức. BABE tương tự như Ouroboros Praos với một số khác biệt đáng kể trong quy tắc lựa chọn chuỗi và các giả định về thời gian.
