@@ -9,8 +9,10 @@ Bridge
 Substrate
 Tổng quan về WinDex
 Liệt kê các chức năng Project sẽ thực hiện
-chuc nang san AMM ket hop OrderBook(tham khao serum)
-
+- Sàn DEX tích hợp OrderBook(tham khảo serum)
+- Token/coin phát hành tên già gì?
+- Chức năng Swap có tính năng gì nổi bật? có kết nối với ecosystem khác không, nếu có thì như thế nào?
+- ...
 
 
  Tác dụng của đồng coin/token và tokenomic
@@ -18,9 +20,9 @@ chuc nang san AMM ket hop OrderBook(tham khao serum)
 	Phần tokenomic nên tách riêng làm 1 mục
 
 
-5. OrderBook của WinDex (Mục này tham khảo mục 5 của Serum)
+1. OrderBook của WinDex (Mục này tham khảo mục 5 của Serum)
 
-6. Roadmap v2 (không có trong whitepaper)
+2. Roadmap v2 (không có trong whitepaper)
 Chia làm 3 phase
 Phase One
 2020 launched
@@ -35,7 +37,8 @@ Serum Swap được build trực tiệp trên OrderBook không phải AMM
 Staking
 Thêm TradingView Chart
 
--> Mục roadmap anh em tự nghĩ rồi viết cũng được tham khảo sườn của serum cũng oke
+-> Mục roadmap anh em tự nghĩ rồi viết cũng được.
+Roadmap của serum nhìn không được hay cho lắm
 
 Điểm còn thiếu của Whitepaper này
 Chưa nêu rõ business model
