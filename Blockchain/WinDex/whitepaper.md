@@ -104,6 +104,24 @@ Các vấn đề hiện tại của các nền tảng phân phối token là:
 	- Các nhà đầu tư muốn tham gia IDO phải nắm giữ số lượng lớn token nền tảng, điều này hạn chế các nhà đầu tư nhỏ lẻ tham gia vào IDO.
 WinDEX platform sẽ cũng cấp các tính năng phân phối to
 
-10. WinDEX team
+7. WinDEX Fiat
+   WinDEX Fiat sẽ làm cho WinDEX Orderbook trở thành sàn giao dịch tiền điện tử phi tập thu hút được người dùng từ thị trường tài chính truyền thống. Các sàn DEX hiện tại chỉ tập trung phát triển nền tảng giao dịch cho những người sở hữu tiền điện tử vì không cung cấp KYC. Chúng tôi sẽ trở thành dự án kết nối thị trường tài chính truyền thống với thế giới tiền điện tử phi tập trung.
+   winDEX cho phép các nhà giao dịch:
+	- Mua crypto thông qua thẻ tín dụng hoặc tài khoản ngân hàng.
+	- Nhận token trực tiếp trong ví của người dùng mà không bị giám sát.
+
+9. Decentralized KYC - Xác thực danh tích phi tập trung
+	- Trên các nền tảng phi tập trung, các nhà giao dịch có thể giao dịch với nhau mà không cần xác định danh tính. Tuy nhiên trong thời điểm hiện tại, việc này hạn chế số lượng người dùng tham gia vào các sàn giao dịch phi tập trung. Chính vì thế chúng tôi đưa ra giải pháp Decentralized KYC - Xác thực danh tích phi tập trung. Bằng cách dụng bằng chứng mật mã thay vì thông tin chính danh của người dùng để xác minh. Chúng tôi có thể ngăn chặn được các hành vi rửa tiền hoặc các hình thức phạm tội tài chính khác.
+10. WinDEX NFTs
+    - Đây là tính năng bổ sung cho hệ sinh thái của WinDEX cacs NFT sinh ra có cơ chế làm phần thưởng cho người tham giao dịch tích cực trên mạng lưới.
+11.	WinDEX P2P Lending
+	- P2P Lending (Cho vay ngang hàng) là hình thức cho vay trực tiếp giữa người vay và người cho vay mà không cần thông qua một bên thứ 3 làm trung gian.
+	- Cụ thể, bằng cách sử dụng các Smart Contract, người đi vay và người cho vay có thể ký hợp đồng cho vay và đi vay mà không cần thông qua trung gian. Thay vào đó, các Smart Contract tự thực hiện và cho phép giao dịch.
+	- Ưu điểm lớn nhất của P2P Lending là chi phí và lãi suất cho vay thấp hơn rất nhiều so với 2 hình thức còn lại vì loại bỏ được bên trung gian. Nhờ đó mà thông tin giao dịch và khách hàng cũng được đảm bảo tính bảo mật.
+
+12.	WinDEX feature
+	- Giao dịch feature là không thể thiếu đối với các sàn giao dịch tập trung, chúng tôi sẽ dưa mô hình này lên sàn giao dịch phi tập trung WinDEX để tăng cơ hội kiếm lợi nhuận cho các nhà giao dịch trong thị trường tiền mã hóa.
+
+1.  WinDEX team
 	- Hoàng Thế Anh là một kỹ sư tốt nghiệp từ trường Đại học Bách Khoa Hà Nội, có đam mê công nghệ, đặc biệt trong lĩnh vực blockchain. Tham gia nghiên cứu trong các group blockchain hàng đầu Việt Nam như Vietnam Blockchain Innovation và Diamond NetWork. Dựa trên nhũng kiến thức nền tảng về Systems engineering, tôi quyết tâm xây dựng mạng lưới Blockchain đầy đủ tính năng và đảm bảo sự bảo mật tuyệt đối. Kiến thức trang bị  Python, RUST & Substrate Framework.
 
