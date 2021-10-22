@@ -125,3 +125,15 @@ WinDEX platform sẽ cũng cấp các tính năng phân phối to
 1.  WinDEX team
 	- Hoàng Thế Anh là một kỹ sư tốt nghiệp từ trường Đại học Bách Khoa Hà Nội, có đam mê công nghệ, đặc biệt trong lĩnh vực blockchain. Tham gia nghiên cứu trong các group blockchain hàng đầu Việt Nam như Vietnam Blockchain Innovation và Diamond NetWork. Dựa trên nhũng kiến thức nền tảng về Systems engineering, tôi quyết tâm xây dựng mạng lưới Blockchain đầy đủ tính năng và đảm bảo sự bảo mật tuyệt đối. Kiến thức trang bị  Python, RUST & Substrate Framework.
 
+
+Mô hình kinh doanh
+- Giá trị nội tại của WinDEX là xây dựng hệ sinh thái sàn giao phi tập trung trên một blockchain riêng biệt. Chính vì thế đồng coin WID tăng cùng với sự phát triển của WinDEX theo chiều dài thời gian. Điều chúng tôi hướng đến là một thị trường giao dịch phi tập chung, nơi đó mọi lợi nhuận thu được từ chi phí giao dịch của người dùng đều đóng góp vào kho bạc của dự án, không có bất cứ cá nhân nào sở hữu số lợi nhuận thu được từ đó. Chính điều này làm tăng giá trị nội tại của WinDEX.
+- Các mô hình thu lợi nhuận
+  - 50% phí giao dịch người dùng sẽ đóng góp vào kho bạc.
+  - Thu lợi nhuận từ hoa hồng cho việc ghép nối người vay và người cho vay trong P2P Leading
+  - Lợi nhuận từ giao dịch phái sinh sẽ đóng góp 100% vào dự án
+  - Có hai loại lệnh trên WinDEX - Lệnh Maker là lệnh không thực hiện ngay lập tức và nằm yên trên sổ lệnh - những lệnh này bổ sung độ sâu và tính thanh khoản cho sổ lệnh. Mặt khác, lệnh Taker lấp đầy ngay các lệnh Maker hiện có. Họ xóa thanh khoản từ sổ lệnh.
+Để giảm thiểu chi phí giao dịch, chúng tôi sẽ tính phí cao hơn cho các đơn đặt hàng nhỏ hơn các đơn đặt hàng lớn hơn. Phía Maker sẽ không tính phí 0 để khuyến khích người dùng mở các lệnh giới hạn trên sổ đặt hàng.
+- Money trading volume https://miro.medium.com/max/875/0*gKuayb87Ak0sMtHV
+- https://miro.medium.com/max/3000/1*XL7pFU_q0QHyiqY_ZN9sDQ.png
+- 
