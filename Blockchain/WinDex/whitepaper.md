@@ -55,7 +55,7 @@ Sổ lệnh giao dịch giải pháp giải quyết vấn đề này. Nhưng hi�
 
 5. Order Book
 
-Sổ lệnh tự động trên chuỗi - Automated on-chain limit orderbooks cho phép người dùng thực hiện các lệnh giao dịch một các trực tiếp bao gồm chọn được mức giá và khối lượng giao dịch. Và điều tuyệt vời là nó là phi tập chung, tất cả giao dịch đều được minh bạch.
+Sổ lệnh tự động trên chuỗi - Automated on-chain limit orderbooks cho phép người dùng thực hiện các lệnh giao dịch một các trực tiếp bao gồm chọn được mức giá và khối lượng giao dịch. Và điều tuyệt vời là nó là phi tập trung, tất cả giao dịch đều được minh bạch.
 Sổ lệnh trên DeFi hoạt động on-chain do đó phải có sự tính toán sao cho nó nhanh hơn và rẻ hơn.
 
 WinDEX Orderbook là sản phẩm chủ đạo của chúng tôi. Đó là một sản phẩm giao dịch phi tâp trung Layer 2 được xây dựng trên mạng lưới Polkadot Network tích hợp tính năng của một orderbook. Có 2 nhóm nhà giao dịch chính:
@@ -127,7 +127,7 @@ WinDEX platform sẽ cũng cấp các tính năng phân phối to
 
 
 Mô hình kinh doanh
-- Giá trị nội tại của WinDEX là xây dựng hệ sinh thái sàn giao phi tập trung trên một blockchain riêng biệt. Chính vì thế đồng coin WID tăng cùng với sự phát triển của WinDEX theo chiều dài thời gian. Điều chúng tôi hướng đến là một thị trường giao dịch phi tập chung, nơi đó mọi lợi nhuận thu được từ chi phí giao dịch của người dùng đều đóng góp vào kho bạc của dự án, không có bất cứ cá nhân nào sở hữu số lợi nhuận thu được từ đó. Chính điều này làm tăng giá trị nội tại của WinDEX.
+- Giá trị nội tại của WinDEX là xây dựng hệ sinh thái sàn giao phi tập trung trên một blockchain riêng biệt. Chính vì thế đồng coin WID tăng cùng với sự phát triển của WinDEX theo chiều dài thời gian. Điều chúng tôi hướng đến là một thị trường giao dịch phi tập trung, nơi đó mọi lợi nhuận thu được từ chi phí giao dịch của người dùng đều đóng góp vào kho bạc của dự án, không có bất cứ cá nhân nào sở hữu số lợi nhuận thu được từ đó. Chính điều này làm tăng giá trị nội tại của WinDEX.
 - Các mô hình thu lợi nhuận
   - 50% phí giao dịch người dùng sẽ đóng góp vào kho bạc.
   - Thu lợi nhuận từ hoa hồng cho việc ghép nối người vay và người cho vay trong P2P Leading
@@ -136,4 +136,31 @@ Mô hình kinh doanh
 Để giảm thiểu chi phí giao dịch, chúng tôi sẽ tính phí cao hơn cho các đơn đặt hàng nhỏ hơn các đơn đặt hàng lớn hơn. Phía Maker sẽ không tính phí 0 để khuyến khích người dùng mở các lệnh giới hạn trên sổ đặt hàng.
 - Money trading volume https://miro.medium.com/max/875/0*gKuayb87Ak0sMtHV
 - https://miro.medium.com/max/3000/1*XL7pFU_q0QHyiqY_ZN9sDQ.png
-- 
+
+
+
+
+Nhằm giảm bớt độ phức tạp, tăng tốc độ giao dịch cũng như loại bỏ những dữ liệu không cần thiết trên chuỗi chính, WinDEX tin rằng chỉ những dữ liệu công khai mới cần thiết lưu trữ trên chuỗi
+
+Windex đưa ra cơ chế off-chain state commit
+
+Những dữ liệu cần xác thực công khai như tài sản người dùng mới được đẩy lên chain
+
+Những dữ liệu khác như sổ lệnh giao dịch, chỉ số dữ liệu thị trường, dữ liệu lịch sử giao dịch... sẽ được lưu trữ off-chain
+
+Dữ liệu off-chain sẽ được xây dựng như một lớp layer 2, để đảm bảo tính bảo mật và minh bạch cho hệ thống
+
+Điều này giúp cho hệ thống tăng khối lượng, giảm độ trễ giao dịch cũng như cạnh tranh trực tiếp với sàn tập trung
+
+3: Mô hình kinh doanh : 1’ -> Thế Anh
+Giá trị của WinDEX được tích lũy theo thời gian hoạt động. Chủ yếu là từ phí giao dịch.
+WinDEX cung cấp 2 loại lệnh là limit order và market order. Với lệnh market order phí giao dịch sẽ là 0.2%, lệnh limit order phí giao dịch bằng 0. Nhằm khuyến khích các nhà tạo lập thì trường trên hệ thống. Phí giao dịch thu được sẽ được chia 50:50. 50% được trả cho nhà tạo lập thì trường và 50% đưa vào kho bạc của WinDEX. Do đó chi phí giao dịch được tích tụ vào đồng coin WID, nên giá trị của nó ngày càng tăng theo khối lượng giao dịch và tăng theo quy mô của thị trường.Và lợi nhuận của WinDEX không bị nắm giữ bởi chủ sàn mà nằm trong tay người dùng thông qua việc nắm giữ đồng coin WID
+Ngoài ra Giá trị WinDEX có được từ một số tính năng:
+-Thu được phí giao dịch từ việc cho vay và môi giới cho vay. Người cho vay thu được lợi nhuận thông qua việc cho vay thông qua WinDEX.
+-Hỗ trợ launchpad, cho các dự án cần huy động vốn. WinDEX coin sẽ bị khoá để có thể tham gia các dự án này, tạo ra sự khan hiếm làm tăng giá trị của WinDEX
+...vv
+4: Các chức năng sẽ được xây dựng: 20s
+-	Nhằm đáp ứng nhu cầu về dòng tiền trong tương lai, dự án sẽ phát triển các tính năng như sau: Chức năng tạo thanh khoản, chức năng vay và cho vay, chức năng giao dịch sử dụng đòn bẩy.
+-	Với mục tiêu giảm chi phí và mở rộng, dự án sẽ hướng tới là 1 parachain của Polkadot, khi đó các cầu nối tới các hệ sinh thái khác sẽ trở nên rẻ và hấp dẫn hơn
+-	Oracle cũng được sử dụng nhằm mục đích cập nhật thông tin giá cả một cách an toàn, giúp tránh được những vụ tấn công chênh lệch giá
+
