@@ -1,5 +1,9 @@
 # AWS
 
+#IAM
+- securely
+- FREE
+
 ## RedShift
 ## EBS
 
@@ -29,7 +33,28 @@
 - [AWS CloudTrail Update – Turn on in All Regions & Use Multiple Trails](https://aws.amazon.com/blogs/aws/aws-cloudtrail-update-turn-on-in-all-regions-use-multiple-trails/)
 
 ## S3
-- [KMS](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html)
+- Secure your data using Access Control Lists and Bucket Policies
+- S3 Standard
+- S3 IA
+  - Infrequently Acesssed
+  - Rapid Access
+  - Lower fee than S3
+- S3 One Zone - IA
+  - One Zone 
+- S3 Intelligent Tiering
+- S3 Glacier
+  - low-cost storage
+  - retrieal times from minutes to hours
+- S3 Glacier Deep Archive
+  - lowest-cost
+  - 12 hours
+
+- S3 Buckets:
+  - Can access via Bucket Policies, Access Control List
+  - Managed Key SSE-S3
+
+- [SSE-C Server Side Encryption with customer provided keys]
+- [KMS Key Management Service](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html)
 - Storage
   - Expedited — Expedited retrievals allow you to quickly access your data when occasional urgent requests for a subset of archives are required. For all but the largest archives (250 MB+), data accessed using Expedited retrievals are typically made available within 1–5 minutes. Provisioned Capacity ensures that retrieval capacity for Expedited retrievals is available when you need it. For more information, see Provisioned Capacity.
 
@@ -71,3 +96,4 @@ and network ACLs
 
 ## Route53
 - Geolocation routing policy – Use when you want to route traffic based on the location of your users. Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
+
