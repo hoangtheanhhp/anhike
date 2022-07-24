@@ -29,6 +29,10 @@
 - [FAQS](https://aws.amazon.com/ebs/faqs/)
 - [Read Replicas](https://aws.amazon.com/rds/features/read-replicas/)
 - ACID => RDS & DynamoDB but SQL=> RDS only (DynamoDB is No SQL DB)
+
+- DynamoDB: NoSQL 
+
+
 ## CloudTrail
 - [AWS CloudTrail Update – Turn on in All Regions & Use Multiple Trails](https://aws.amazon.com/blogs/aws/aws-cloudtrail-update-turn-on-in-all-regions-use-multiple-trails/)
 
@@ -97,3 +101,25 @@ and network ACLs
 ## Route53
 - Geolocation routing policy – Use when you want to route traffic based on the location of your users. Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
 
+## ECR
+- Register
+- 認証トークン
+- Repository
+- Repository Policies
+- Image
+
+### AWS Fargate
+- Serverless compute for containers
+- Deploy and manage your applications, not infrastructure. Fargate removes the operational overhead of scaling, patching, securing, and managing servers.
+- Monitor your applications via built-in integrations with AWS services like Amazon CloudWatch Container Insights. Gather metrics and logs with third-party tools.
+- Improve security through workload isolation by design. Amazon ECS tasks and Amazon EKS pods run in their own dedicated runtime environment.
+- Only pay for what you use. Fargate scales the compute to closely match your specified resource requirements. With Fargate, there is no over-provisioning and paying for additional servers.
+
+## ECS
+- Amazon ECS is a fully managed container orchestration service that helps you easily deploy, manage, and scale containerized applications. It deeply integrates with the rest of the AWS platform to provide a secure and easy-to-use solution for running container workloads in the cloud and now on your infrastructure with Amazon ECS Anywhere.
+- Run highly secure, reliable, and scalable containers
+- Launch thousands of containers across the cloud using your preferred continuous integration and delivery (CI/CD) and automation tools.
+- Optimize your time with AWS Fargate serverless compute for containers, which eliminates the need to configure and manage control plane, nodes, and instances.
+- Save up to 50 percent on compute costs with autonomous provisioning, auto-scaling, and pay-as-you-go pricing.
+
+## 

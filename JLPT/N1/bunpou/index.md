@@ -1,5 +1,98 @@
 # 文法
 
+
+☘️day7
+🔅83.(N chỉ thời gian)を限りに đến hết N thì ...
+🔅84.をものともせず bất chấp , mặc kệ 
+🔅85.を皮切りに(=て初めて) khởi đầu từ , bắt đầu từ
+🔅86.きらいがある có xu hướng
+🔅87...始末だ kết quả là , kết cục ( theo hướng xấu)
+🔅88.まで  chỉ ... mà thôi , đến ...( mức nào đó ) 聞くまで chỉ hỏi v thôi
+諦めるまで  chỉ còn cách từ bỏ
+それまで cũng chỉ đến v
+🔅90.というものでもない đâu phải , chắc gì đã
+🔅92.(Aイ、ナ)限り(=すごく) rất 
+🔅93.Nの至り　(光栄、赤面、感激) rất , vô cùng
+🔅94.Nの極み  (幸福、悲嘆、贅沢) cực kì 
+🔅95.かたがた nhân tiện
+🔅96.っぱなし để nguyên , giữ nguyên ( 1 trạng thái )
+💹day8
+🔅 97。まみれ。dính đầy.... ( cảm giác k sạch sẽ )
+🔅 98。に足りない。k đáng để...
+論ずる　ろんずる bàn , tranh luận
+🔅 99。としてあるまじき。k dc phép, k nên có ở
+🔅 100。にたえる。đáng..., chịu đựng...
+ギャラリー phòng triển lãm tranh
+鑑賞　かんしょう
+🔅 101。N1あってのN2。N2 tồn tại được là nhờ N1 , điều kiện để duy trì N2 là N1
+🔅 102。といったところ。cũng chỉ cỡ , tầm khoảng
+相場　そうば giá chung , giá thị trường
+🔅 103。からの。có hơn, có tới
+🔅 104。ぬく。có vẻ , giống như
+🔅 105。ときたら。nói đến 
+🔅 106。ともなると một khi đã ...thì
+🔅 107。はおろか。đừng nói đến.... ngay cả,
+Chưa nói tới ... ngay cả  .. cũng 
+🔅 108。ようと....まいと。dù có... hay k thì
+🔅 109。かたわら。bên cạnh, ngoài, vừa vừa , đồng thời
+🔅 110。極まりない。vô cùng..., cực kì
+🔅 111。こととて。bởi vì
+🔅 112.ずくめ　toàn là (いいこと、悪いこと、ごちそう… - k hiện hữu cụ thể)
+💹day9
+🔅 113。のみ。chỉ là
+🔅 114。たりとも。dù chỉ thậm chí
+🔅 115。てからというもの。kể từ sau khi
+🔅 116。とあって。vì do
+🔅 117。とは(=なんて) nhấn mạnh vế phía trước
+🔅 118。ないまでも。tuy k đến mức
+🔅 119。Nならでは。Chỉ có ở ( nét riêng của N)
+🔅 120。にいたって。đến khi... mới....
+🔅 121。にかかわる。liên quan đến
+🔅 122。にひきかえ。trái ngược với
+🔅 123。にもまして。hơn cả , ... huống chi là
+🔅 124。ばこそ。chính vì,.do
+🔅 125。までもなく。k cần thiết pải
+🔅 126。(が)ゆえ。do vì
+🔅 127。をもって。bằng bởi
+💹day10
+🌸128。をよそに。mặc kệ , k quan tâm
+🌸129。んがため。để vì
+🌸130。までもない。k cần thiết pải
+🌸131。にして。chỉ có ... thì mới
+🌸132。といえども。mặc dù là, dù ....đi chăng nữa
+🌸133。たが最後。Một khi (đã)... thì....( k tốt)
+🌸134。だに...ない。ngay cả... cũng k
+🌸135。かろうじて 。cuối cùng cũng
+🌸136。ようとしない。k có dự định , k muốn
+🌸137。からこそ。chính vì
+のです( mẫu này giải thích hơi trừu tượng) 
+🌸138。そうもない。khó có thể
+🌸 139。にすぎない。chỉ là
+💹day11
+🔅140。ようがない。=方法がない k có cách nào 
+🔅142.ものではない k phải là , k nên 
+🔅143.きらいがある có khuynh hướng , có xu hướng ( chiều hướng k tốt )
+🔅144.Nといえども dù là N
+🔅145.N1あってのN2 N2 phải có N1 , nhờ có N1 mà N2 duy trì
+🔅146.をもって bằng 身をもって tự mình
+🔅147....ば…ものを nếu ... thì đã ( thể hiện sự nuối tiếc )
+🔅148.べきではない k nên 
+🔅149.にほかならない chính là 
+💹day12
+🔅150.てからというもの kể từ khi
+🔅151.ものではない k nên , k phải là 
+🔅152.にせよ dù là , cho dù
+🔅153.ずにはいられない (ないではいられない) k thể ngừng V, k thể k V ( k thể kìm nén được V bằng ý chí của mình )
+🔅154. 疑問詞 Vようと(も) dù ... thì
+🔅155.かかわらず bất kể , k lieen quan tới
+🔅156.がはやいか vừa mới..thì
+🔅157.をもとにして dựa trên , dựa theo
+🔅158.かたがた nhận tiện , nhân dịp
+🔅159.べからざるN  N k thể nào , k thể 
+🔅160.てやまない luôn luôn , rất 
+🔅161.Nずくめ toàn N
+
+
 ## ～ようにも...れない
 ～ Dù muốn...cũng không thể...
 >眠くて、起ようにも起られない。
